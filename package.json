@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "dependencies": {
+    "babel-core": "^5.8.25",
+    "classnames": "^2.2.0",
+    "director": "^1.2.8",
+    "gyrejs": "0.0.12",
+    "immutable": "^3.7.5",
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0",
+    "todomvc-app-css": "^2.0.0",
+    "todomvc-common": "^1.0.0"
+  }
+}
