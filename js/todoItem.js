@@ -17,12 +17,12 @@
 
 		handleEdit: function () {
 			this.props.onEdit();
-			this.setState({editText: this.props.todo.get("title")});
+			this.setState({editText: this.props.todo.title});
 		},
 
 		handleKeyDown: function (event) {
 			if (event.which === ESCAPE_KEY) {
-				this.setState({editText: this.props.todo.get("title")});
+				this.setState({editText: this.props.todo.title});
 				this.props.onCancel(event);
 			} else if (event.which === ENTER_KEY) {
 				this.handleSubmit(event);
@@ -36,7 +36,7 @@
 		},
 
 		getInitialState: function () {
-			return {editText: this.props.todo.get("title")};
+			return {editText: this.props.todo.title};
 		},
 
 		/**
@@ -56,18 +56,18 @@
 		render: function () {
 			return (
 				<li className={classNames({
-					completed: this.props.todo.get("completed"),
+					completed: this.props.todocompleted,
 					editing: this.props.editing
 				})}>
 					<div className="view">
 						<input
 							className="toggle"
 							type="checkbox"
-							checked={this.props.todo.get("completed")}
+							checked={this.props.todo.completed}
 							onChange={this.props.onToggle}
 							/>
 						<label onDoubleClick={this.handleEdit}>
-							{this.props.todo.get("title")}
+							{this.props.todo.title}
 						</label>
 						<button className="destroy" onClick={this.props.onDestroy} />
 					</div>
